@@ -91,7 +91,7 @@ in
       bindsym Mod4+l exec i3lock-fancy
 
       # Sub floating windows are too big
-      floating_maximum_size 800 x 600
+      # floating_maximum_size 800 x 600
      
       mode "Exit (L)ogout, (R)eboot, (P)oweroff" {
           bindsym ${modifier}+r exec systemctl reboot

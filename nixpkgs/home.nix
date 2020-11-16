@@ -29,7 +29,7 @@ in
     pkgs.fortune
     # Following is needed for i3 bar. Need to figure out, how to put
     # this into i3 config.
-    (pkgs.python36.withPackages(ps: with ps; [ netifaces pip psutil requests ]))
+    (pkgs.python38.withPackages(ps: with ps; [ netifaces pip psutil requests ]))
     #pkgs.termite
     pkgs.thunderbird
     # pkgs.virtualbox
@@ -70,7 +70,7 @@ in
 
   programs.home-manager = {
     enable = true;
-    path = https://github.com/rycee/home-manager/archive/release-20.03.tar.gz;
+    path = https://github.com/rycee/home-manager/archive/release-20.09.tar.gz;
   };
 
   programs.zsh = {
@@ -99,6 +99,9 @@ in
       enable = true;
       inactiveInterval = 5;
       lockCmd = "\${pkgs.i3lock}/bin/i3lock-fancy";
+    };
+    syncthing = {
+      enable = true;
     };
     #openvpn = {
     #  servers = {
